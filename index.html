@@ -1,149 +1,288 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Deepak Wadhwa - Learning Community</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html,body{
+  width:100%;
+  min-height:100%;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(135deg,#0b6eb8,#18c13d);
+  overflow-x:hidden;
+}
+
+/* Main Container */
+.sio-main-container{
+  width:100%;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:15px;
+}
+
+/* Card */
+.sio-landing-wrap{
+  width:100%;
+  max-width:500px;
+  text-align:center;
+  background:#fff;
+  padding:24px 18px;
+  border-radius:18px;
+  box-shadow:0 8px 25px rgba(0,0,0,.18);
+}
+
+/* Pulse */
+@keyframes pulse-blue{
+  0%{
+    box-shadow:0 0 0 0 rgba(11,110,184,.55);
+  }
+  70%{
+    box-shadow:0 0 0 12px rgba(11,110,184,0);
+  }
+  100%{
+    box-shadow:0 0 0 0 rgba(11,110,184,0);
+  }
+}
+
+/* Button */
+.sio-btn{
+  display:block;
+  width:100%;
+  min-height:52px;
+  background:linear-gradient(45deg,#0b6eb8,#0a8be0);
+  color:#fff;
+  padding:14px 12px;
+  font-size:15px;
+  font-weight:700;
+  border-radius:50px;
+  text-decoration:none;
+  margin:12px 0;
+  transition:.25s ease;
+  animation:pulse-blue 2s infinite;
+  -webkit-tap-highlight-color:transparent;
+}
+
+.sio-btn:active{
+  transform:scale(.98);
+}
+
+.sio-btn:hover{
+  transform:scale(1.02);
+}
+
+/* Profile */
+.sio-profile{
+  margin:16px 0;
+}
+
+.sio-avatar{
+  width:105px;
+  height:105px;
+  margin:0 auto;
+  border-radius:50%;
+  overflow:hidden;
+  border:4px solid #fff;
+  box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+.sio-avatar img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.sio-headline{
+  margin-top:12px;
+  font-size:22px;
+  line-height:1.25;
+  font-weight:800;
+  color:#18a93a;
+}
+
+/* Features */
+.sio-features{
+  margin-top:12px;
+}
+
+.sio-feature{
+  display:flex;
+  justify-content:flex-start;
+  align-items:center;
+  gap:9px;
+  width:100%;
+  margin:9px 0;
+  text-align:left;
+}
+
+.sio-feature p{
+  flex:1;
+  font-size:14px;
+  line-height:1.4;
+  font-weight:600;
+  color:#333;
+}
+
+.sio-tick{
+  flex:0 0 24px;
+  width:24px;
+  height:24px;
+  border-radius:50%;
+  background:#eaf7ea;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:800;
+  color:#18a93d;
+  font-size:14px;
+}
+
+/* Highlight */
+.sio-highlight{
+  width:100%;
+  margin:16px 0;
+  padding:10px 8px;
+  background:#f1f8ff;
+  border-radius:10px;
+  font-size:13px;
+  line-height:1.4;
+  font-weight:700;
+  color:#0b6eb8;
+}
+
+/* Disclaimer */
+.sio-disclaimer{
+  margin-top:16px;
+  padding:0 4px;
+  font-size:10.5px;
+  line-height:1.5;
+  color:#777;
+}
+
+/* Small Mobile */
+@media(max-width:380px){
+
+  .sio-main-container{
+    padding:10px;
   }
 
-  .card {
-    width: 85%;
-    max-width: 340px; 
-    background: #010a0f;
-    border: 1.5px solid #00d2ff;
-    border-radius: 35px;
-    padding: 20px 15px;
-    text-align: center;
-    box-shadow: 0 0 25px rgba(0, 210, 255, 0.15);
+  .sio-landing-wrap{
+    padding:20px 14px;
+    border-radius:15px;
   }
 
-  .profile-img {
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    border: 3px solid #00d2ff;
-    object-fit: cover;
-    margin-top: -5px;
-    box-shadow: 0 0 15px #00d2ff;
+  .sio-avatar{
+    width:90px;
+    height:90px;
   }
 
-  h1 {
-    color: #fff;
-    font-size: 20px;
-    margin: 15px 0;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+  .sio-headline{
+    font-size:19px;
   }
 
-  .features {
-    text-align: left;
-    margin: 0 auto;
-    width: 90%;
+  .sio-btn{
+    min-height:48px;
+    padding:13px 8px;
+    font-size:13px;
   }
 
-  .feature-item {
-    color: #ccc;
-    font-size: 13px;
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    display: flex;
-    align-items: center;
+  .sio-feature p{
+    font-size:12.5px;
   }
 
-  .feature-item:last-child { border-bottom: none; }
+  .sio-tick{
+    flex-basis:22px;
+    width:22px;
+    height:22px;
+  }
+}
 
-  .icon { margin-right: 12px; font-size: 16px; }
+/* Tablet/Desktop */
+@media(min-width:768px){
 
-  .join-text {
-    color: #eee;
-    font-size: 12px;
-    margin: 20px 0 12px;
-    font-weight: 300;
+  .sio-landing-wrap{
+    padding:28px 25px;
   }
 
-  .telegram-btn {
-    display: block;
-    background: linear-gradient(90deg, #00d2ff 0%, #9247ff 100%);
-    color: white;
-    text-decoration: none;
-    padding: 14px;
-    border-radius: 50px;
-    font-weight: bold;
-    font-size: 16px;
-    margin-bottom: 15px;
-    box-shadow: 0 4px 12px rgba(0, 210, 255, 0.3);
+  .sio-headline{
+    font-size:24px;
   }
 
-  .hindi-quote {
-    color: #bbb;
-    font-size: 13px;
-    margin-bottom: 20px;
-    line-height: 1.4;
+  .sio-btn{
+    font-size:16px;
   }
-
-  .footer-box {
-    border: 1px solid rgba(0, 210, 255, 0.2);
-    border-radius: 12px;
-    padding: 8px;
-    font-size: 11px;
-    color: #888;
-  }
-
-  /* Link styling for Agency */
-  .footer-box a { 
-    color: #00d2ff; 
-    font-weight: bold; 
-    text-decoration: none;
-  }
-
-  .disclaimer {
-    font-size: 9px;
-    color: #444;
-    margin-top: 12px;
-  }
+}
 </style>
-</head>
-<body>
 
-<div class="card">
-  <img src="https://i.ibb.co/FkV61CBG/711752123-122102238423341553-4586529772719677765-n.jpg" alt="Munaaf" class="profile-img">
+<div class="sio-main-container">
 
-  <h1>Munaaf</h1>
+  <div class="sio-landing-wrap">
 
-  <div class="features">
-    <div class="feature-item"><span class="icon"></span> Learning & Educational Sessions</div>
-    <div class="feature-item"><span class="icon"></span> Market Concepts & Awareness</div>
-    <div class="feature-item"><span class="icon"></span> Chart Reading Concepts</div>
-    <div class="feature-item"><span class="icon"></span> Educational Case Discussions</div>
+    <a class="sio-btn"
+       href="https://t.me/+oRpvngxsYqNlZWM9"
+       target="_blank"
+       rel="noopener noreferrer">
+      JOIN TELEGRAM CHANNEL 🚀
+    </a>
+
+    <div class="sio-profile">
+
+      <div class="sio-avatar">
+        <img
+          src="https://i.ibb.co/KjrBVv9h/mr88-B4-MCQeolto-Xob-M9-JEe-Eyn-ZMn-Bj-FMz-Ac0-SMDAi-h-Ff1-Qg-RBAkl-Xo7yo-Kxe-N-POtqpyfq-Ow-Kv-VPc-Ao-I-I.jpg"
+          alt="Work From Home">
+      </div>
+
+      <div class="sio-headline">
+        Work From Home Handwriting Job
+      </div>
+
+    </div>
+
+    <div class="sio-features">
+
+      <div class="sio-feature">
+        <div class="sio-tick">✓</div>
+        <p>Simple Writing Work – No Experience Needed</p>
+      </div>
+
+      <div class="sio-feature">
+        <div class="sio-tick">✓</div>
+        <p>Earn ₹15,000 – ₹30,000 Per Month</p>
+      </div>
+
+      <div class="sio-feature">
+        <div class="sio-tick">✓</div>
+        <p>Work From Home • Flexible Timing</p>
+      </div>
+
+      <div class="sio-highlight">
+        Limited Seats Available – Apply Today! 🚀
+      </div>
+
+    </div>
+
+    <a class="sio-btn"
+       href="https://t.me/+oRpvngxsYqNlZWM9"
+       target="_blank"
+       rel="noopener noreferrer">
+      JOIN TELEGRAM CHANNEL 🚀
+    </a>
+
+    <div class="sio-disclaimer">
+      <b style="color:#0a7a3a">Note:</b>
+      This is project-based work.
+      Earnings depend on performance and submission quality.
+    </div>
+
   </div>
 
-  <p class="join-text">Join our learning community and grow your knowledge</p>
-
-  <a href="https://t.me/+VQKcLntbMYhjOGJl" class="telegram-btn">JOIN TELEGRAM</a>
-
-  <p class="hindi-quote">     ,     </p>
-
-  <div class="footer-box">
-    This Channel Advertise By <a href="https://t.me/+3XoqJNLxYHswNTc1" target="_blank">AD BUILD AGENCY</a>
-  </div>
-
-  <div class="disclaimer">
-    Terms | Privacy | Disclaimer <br>
-    This site is not part of Facebook� or endorsed by Facebook�.
-  </div>
 </div>
-
-</body>
-</html>
