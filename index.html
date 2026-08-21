@@ -35,7 +35,7 @@ body{
   min-height:100vh;
   text-align:center;
   background:#fff;
-  padding:40px 25px;
+  padding:35px 25px 50px;
   border-radius:0;
   box-shadow:none;
 }
@@ -81,7 +81,7 @@ body{
 
 /* Profile */
 .sio-profile{
-  margin:16px 0;
+  margin:22px 0 18px;
 }
 
 .sio-avatar{
@@ -107,6 +107,51 @@ body{
   line-height:1.25;
   font-weight:800;
   color:#18a93a;
+}
+
+/* Intro */
+.sio-intro{
+  max-width:760px;
+  margin:0 auto 24px;
+  font-size:15px;
+  line-height:1.6;
+  color:#555;
+}
+
+/* Information Cards */
+.sio-info-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  margin:22px 0;
+}
+
+.sio-info-card{
+  padding:16px 10px;
+  background:#f7fbff;
+  border:1px solid #e4eef7;
+  border-radius:12px;
+}
+
+.sio-info-card strong{
+  display:block;
+  font-size:14px;
+  color:#0b6eb8;
+  margin-bottom:5px;
+}
+
+.sio-info-card span{
+  display:block;
+  font-size:12px;
+  line-height:1.4;
+  color:#666;
+}
+
+.sio-section-title{
+  margin:22px 0 12px;
+  font-size:18px;
+  font-weight:800;
+  color:#222;
 }
 
 /* Features */
@@ -190,6 +235,26 @@ body{
     font-size:21px;
   }
 
+  .sio-intro{
+    font-size:13px;
+    margin-bottom:18px;
+  }
+
+  .sio-info-grid{
+    grid-template-columns:1fr;
+    gap:8px;
+    margin:16px 0;
+  }
+
+  .sio-info-card{
+    padding:12px 10px;
+  }
+
+  .sio-section-title{
+    font-size:16px;
+    margin:18px 0 10px;
+  }
+
   .sio-btn{
     min-height:48px;
     padding:13px 8px;
@@ -244,21 +309,45 @@ body{
       </div>
 
       <div class="sio-headline">
-        Work From Home Handwriting Job
+        Handwriting Work Information
       </div>
 
+    </div>
+
+    <div class="sio-intro">
+      Explore basic information about handwriting-based work, general requirements,
+      and flexible work options. Details and availability may vary by project.
+    </div>
+
+    <div class="sio-section-title">
+      What You Can Learn
+    </div>
+
+    <div class="sio-info-grid">
+      <div class="sio-info-card">
+        <strong>📝 Work Details</strong>
+        <span>Understand the general process and submission requirements.</span>
+      </div>
+      <div class="sio-info-card">
+        <strong>⏰ Flexible Options</strong>
+        <span>Learn about project-based work and flexible schedules.</span>
+      </div>
+      <div class="sio-info-card">
+        <strong>📚 Basic Guidance</strong>
+        <span>Get useful information before deciding whether a project suits you.</span>
+      </div>
     </div>
 
     <div class="sio-features">
 
       <div class="sio-feature">
         <div class="sio-tick">✓</div>
-        <p>Simple Writing Work – No Experience Needed</p>
+        <p>Simple handwriting-based project information</p>
       </div>
 
       <div class="sio-feature">
         <div class="sio-tick">✓</div>
-        <p>Earn ₹15,000 – ₹30,000 Per Month</p>
+        <p>Project details and requirements explained clearly</p>
       </div>
 
       <div class="sio-feature">
@@ -267,7 +356,7 @@ body{
       </div>
 
       <div class="sio-highlight">
-        Limited Seats Available – Apply Today! 🚀
+        Check the available information and project details 🚀
       </div>
 
     </div>
@@ -281,8 +370,8 @@ body{
 
     <div class="sio-disclaimer">
       <b style="color:#0a7a3a">Note:</b>
-      This is project-based work.
-      Earnings depend on performance and submission quality.
+      This page provides general project information. Availability,
+      requirements and compensation, if applicable, depend on the specific project.
     </div>
 
   </div>
