@@ -25,18 +25,19 @@ body{
   display:flex;
   justify-content:center;
   align-items:center;
-  padding:15px;
+  padding:0;
 }
 
 /* Card */
 .sio-landing-wrap{
   width:100%;
-  max-width:620px;
+  max-width:none;
+  min-height:100vh;
   text-align:center;
   background:#fff;
-  padding:30px 24px;
-  border-radius:18px;
-  box-shadow:0 8px 25px rgba(0,0,0,.18);
+  padding:40px 25px;
+  border-radius:0;
+  box-shadow:none;
 }
 
 /* Pulse */
@@ -171,12 +172,13 @@ body{
 @media(max-width:380px){
 
   .sio-main-container{
-    padding:10px;
+    padding:0;
   }
 
   .sio-landing-wrap{
-    padding:24px 16px;
-    border-radius:15px;
+    min-height:100vh;
+    padding:30px 18px;
+    border-radius:0;
   }
 
   .sio-avatar{
@@ -209,7 +211,7 @@ body{
 @media(min-width:768px){
 
   .sio-landing-wrap{
-    padding:34px 30px;
+    padding:50px 40px;
   }
 
   .sio-headline{
